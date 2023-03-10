@@ -1,13 +1,13 @@
 import React from "react";
 
-const ListOfGoals = ({ allGoalsPrps }) => {
+const ListOfGoals = (props) => {
   return (
     <ul>
-      {allGoalsPrps.length > 0 ?
-        allGoalsPrps.map((ele, ind) => (<li>
+      {
+        props.allGoals.map((ele, ind) => (<li key={ind}>
           <p>My goal is to {ele.goal},by {ele.by}.</p>
         </li>
-        )) : null
+        ))
       }
     </ul>
   );

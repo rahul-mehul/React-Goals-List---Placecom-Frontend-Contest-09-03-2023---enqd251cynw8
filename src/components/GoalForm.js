@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const GoalForm = ({ setgoalsPrps, allGoalsPrps }) => {
+const GoalForm = (props) => {
   const [formData, setFormData] = useState({
     goal: "",
     by: ""
   });
   function addClick(e) {
     e.preventDefault();
-    setgoalsPrps([...allGoalsPrps, formData])
+    props.setGoals([...props.allGoals, formData])
     setFormData({ goal: "", by: "" })
   }
 

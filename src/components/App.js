@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/App.css';
+
 import GoalForm from './GoalForm';
 import ListOfGoals from './ListOfGoals';
 
@@ -10,8 +11,9 @@ const App = () => {
 
   return (
     <div id="main">
-      <GoalForm setgoalsPrps={setAllGoals} allGoalsPrps={allGoals} />
-      <ListOfGoals allGoalsPrps={allGoals} />
+      <GoalForm setGoals={setAllGoals} allGoals={allGoals} />
+      <ListOfGoals allGoals={allGoals} />
+
     </div>
   )
 
